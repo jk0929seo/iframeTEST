@@ -1,0 +1,82 @@
+<script>
+    function reportSend() {
+        if (document.formn.iframeUrl.value=="") {
+            alert('iframe URL을 입력해 주세요');
+            document.formn.iframeUrl.focus()
+            return false;
+        }
+    }
+/*
+    function calcHeight(){
+     //find the height of the internal page
+    
+     var the_height=document.getElementById('ifm_image').contentWindow.document.body.scrollHeight;
+    
+     //change the height of the iframe
+     document.getElementById('the_iframe').height=the_height;
+    
+     //document.getElementById('the_iframe').scrolling = "no";
+     document.getElementById('ifm_image').style.overflow = "hidden";
+    }
+*/
+//var the_height=document.body.scrollHeight;
+//console.log ("the_height=" + the_height)
+
+</script>
+
+
+<header>
+    <h1>KT iframe Test</h1>
+    <a href="#gnb">주메뉴 바로 가기</a>
+    <a href="#main">본문 메뉴 바로 가기</a>
+
+    
+</header>
+<!-- GNB Start-->
+<nav id="gnb">
+    <div class="logo">
+           <a href="http://www.kt.com" target="_blank"><img src="images/logo.png" style="margin-top: 14px;" alt="KT로고"></a>
+    </div>
+    <div class="inner">
+        <div>
+            <a href="/tcupdate" class="gnbtitle">T/C 관리</a>
+        </div>   
+        <div>
+            <a href="/" class="gnbtitle">Iframe테스트</a>
+        </div>   
+    <div class="formclass">
+                <form name="formn" action="/iframe" method="post" onsubmit="return reportSend()">
+                <label for='iframeUrl'>url</label>
+                <input type="text" id="iframeUrl"  name="iframeUrl" size="45" value="<%=iframeUrl%>"> <label for='iframeHeight'>Height</label>  <input type="text" id="iframeHeight"  name="iframeHeight" size="3" value="<%=iframeHeight%>">
+                <input type="submit" value="확인">
+            </form>  
+            </div>
+               <div>  <a href="help" title="새창으로 열림" class="pop_btn" target="_blank">도움말</a></div>
+    </div>
+  
+  </div>   
+
+ 
+  
+
+
+<!-- 
+  <div class="inner">
+  <a href="/help"><input type="button" onclick="viewHelp();" value="도움말"></a>
+  </div>
+ -->
+
+
+    <!-- document.body.scrollHeight -->
+  
+</nav>
+<!-- GNB End-->
+<div id="main">
+    <section><iframe src="<%=iframeUrl%>" width="1080" height="<%=iframeHeight%>" frameborder="0" scrolling="no" title="이벤트 본문" id="ifm_image" name="ifm_image" ></iframe>
+    </section>
+</div>
+<footer>
+
+
+</footer>
+

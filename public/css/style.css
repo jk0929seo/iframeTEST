@@ -1,0 +1,199 @@
+html {
+    font-family: 'Noto Sans', sans-serif;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+   /* margin-top: 5%;  */
+}
+
+header {
+    margin-top: 4%;
+    display: none;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height : 54px;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Noto Sans Bold";
+    border-bottom: 2px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    vertical-align: middle;
+    
+}
+
+nav > div.logo{
+    width: 77px;
+   /* height: 77px;*/
+    background-color: #1baec5;
+    text-align: center;
+}
+
+nav > div.logo > img{
+    margin-top: 27px;
+}
+
+nav > div.inner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 15pt;
+    flex: 3;
+    width: 72%;
+  }
+
+nav div.btn > img{
+    vertical-align: middle;
+}
+
+nav .gnbtitle {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    width: 160px;
+}
+
+nav .gnbutil {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: #e4e9ec;;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 44px;
+    font-size: 12pt;
+    text-align: center;
+}
+form{
+    font-size: 12pt;
+    text-align: center;
+}
+
+
+nav .gnbutil :active {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #05a4bc;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 44px;
+    font-size: 12pt;
+}
+
+article {
+    border: 10px;
+    border-style: inset;
+    margin-top: 5%;
+    height: 88%;
+    width: 99%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-top: auto;
+    height: 10%;
+    background-color: white;
+}
+
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+}
+  
+@keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+}
+
+.hidden {
+    display: none !important;
+}
+
+.dropdown {
+    overflow: hidden;
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+  
+.subnav > .detailmenu {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14pt;
+}
+
+.subnav > .detailmenu:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .subnav {
+    display: block;
+}
+#main{
+    text-align:center;
+    margin-top:60px;
+   
+}
+
+.pop_btn {display:inline-block; vertical-align:top; margin:10px 0 2 2px; padding:6px 10px; background:lightcoral; color:#fff; text-transform:uppercase;}
+.pop_opacity {width:100%; height:100%; position:fixed; top:0; left:0; background:rgba(0,0,0,0.5); opacity:0; z-index:-1;
+-webkit-transition:all 0.3s;
+-moz-transition:all 0.3s;
+-o-transition:all 0.3s;
+transition:all 0.3s;
+}
+.pop_opacity.on {opacity:1; z-index:1;}
+
+/* display:flex;  */
+.pop {width:800px; height:700px; position:fixed; top:100px; left:300px; box-shadow:3px 3px 6px rgba(0,0,0,0.3);
+justify-content:center; background:#eee; z-index:1; opacity:1;
+	
+padding: 12px 16px;
+}
+.pop.on {opacity:1; z-index:1;}
+.pop_close {position:absolute; top:10px; right:10px; font-size:30px; color:#222; font-weight:500;}
+
+
+.formclass {
+    padding: 5px 5px 0px 0px;
+    width:600px; 
+    text-align: left;
+    
+}
+
+/* 
+-webkit-transform:translate(-50%, -50%);
+-moz-transform:translate(-50%, -50%);
+-o-transform:translate(-50%, -50%);
+transform:translate(-50%, -50%);
+-webkit-transition:all 0.3s;
+-moz-transition:all 0.3s;
+-o-transition:all 0.3s;
+transition:all 0.3s; */
